@@ -1,6 +1,15 @@
 import { useMemo, useState } from 'react'
 import './App.css'
 
+const cardColors = {
+  red: '#ff00002b',
+  blue: '#0073ff42',
+  green: '#00ff2f48',
+  black: '#00000931',
+  purple: '#6703fd50',
+  golden: '#ffcf4b6a',
+}
+
 const games = [
   {
     id: 'wolfenstein_tno',
@@ -94,7 +103,7 @@ const games = [
 
 function GameCard({ game, isFavorite, onToggleFavorite }) {
   return (
-    <article className="game-card">
+    <article className="game-card" style={{ backgroundColor: cardColors[game.tone] }}>
       <div
         className={`game-art game-art--${game.tone}${game.imageUrl ? ' game-art--has-image' : ''}`}
       >
@@ -123,7 +132,7 @@ function GameCard({ game, isFavorite, onToggleFavorite }) {
           <h3>{game.title}</h3>
         </div>
         <div className="category-list" aria-label="Categorías">
-          {game.categories.map((category) => (
+          {[...game.categories].sort((a, b) => a.localeCompare(b, 'es')).map((category) => (
             <span className="category-pill" key={category}>{category}</span>
           ))}
         </div>
@@ -154,7 +163,8 @@ function App() {
   )
   const favoriteCategories = [
     'Todas',
-    ...new Set(games.flatMap((game) => game.categories)),
+    ...new Set(games.flatMap((game) => game.categories))
+      .values(),
   ]
 
   function toggleFavorite(gameId) {
@@ -271,7 +281,7 @@ function App() {
               <div className="empty-favorites">
                 <span className="empty-heart" aria-hidden="true">♡</span>
                 <div>
-                  <h3>{favoriteGames.length ? 'No hay juegos en esta categoría' : 'Todavía no tienes favoritos'}</h3>
+                  <h3>{favoriteGames.length ? 'No hay juegos en esta categoría' : 'Todavía no tienes juegos favoritos'}</h3>
                   <p>{favoriteGames.length ? 'Prueba con otra categoría o explora el catálogo.' : 'Guarda los juegos que te llamen la atención y los encontrarás aquí.'}</p>
                 </div>
                 <a href="#catalogo">Explorar catálogo <span aria-hidden="true">↗</span></a>
@@ -286,7 +296,7 @@ function App() {
           <span className="brand-mark" aria-hidden="true">G</span>
           <span>game<span className="brand-accent">hub</span></span>
         </a>
-        <p>Un buen juego puede llevarte a cualquier lugar.</p>
+        <p>Tu próxima aventura empieza aquí.</p>
         <span className="footer-credit">HECHO PARA QUIENES AMAN JUGAR <span aria-hidden="true">♥</span> · GAMEHUB © 2026</span>
       </footer>
     </div>
