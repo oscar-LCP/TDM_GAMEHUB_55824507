@@ -47,7 +47,10 @@ function App() {
   )
   const favoriteCategories = [
     'Todas',
-    ...new Set(games.flatMap((game) => game.categories)),
+    ...[...new Set(games.flatMap((game) => game.categories))]
+      .sort((firstCategory, secondCategory) =>
+        firstCategory.localeCompare(secondCategory, 'es', { sensitivity: 'base' }),
+      ),
   ]
 
   function toggleFavorite(gameId) {
