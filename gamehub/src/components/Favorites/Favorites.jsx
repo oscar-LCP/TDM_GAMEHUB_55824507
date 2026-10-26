@@ -1,4 +1,5 @@
 import { GameCard } from '../Catalog/Catalog'
+import './Favorites.component.css'
 
 export default function Favorites({
   favoriteGames,

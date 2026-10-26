@@ -1,3 +1,5 @@
+import './NavBar.component.css'
+
 export default function NavBar({ darkMode, onToggleTheme }) {
   return (
     <header className="site-header">

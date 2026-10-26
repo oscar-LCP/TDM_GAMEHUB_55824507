@@ -1,0 +1,129 @@
+.favorites-section {
+  padding: 65px 0 76px;
+  background: var(--favorites-bg);
+}
+
+.favorites-tools {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.favorite-count {
+  margin-right: 7px;
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.favorite-count strong {
+  display: inline-grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
+  border-radius: 50%;
+  background: var(--lime);
+  color: var(--ink);
+  font-size: 11px;
+}
+
+.filter-label {
+  color: var(--muted);
+  font-size: 9px;
+}
+
+.favorites-tools select {
+  min-width: 98px;
+  padding: 8px 25px 8px 10px;
+  border: 1px solid var(--control-border);
+  border-radius: 4px;
+  background: var(--panel-raised);
+  color: var(--ink);
+  font: inherit;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.favorites-grid {
+  margin-top: 28px;
+}
+
+.empty-favorites {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  margin-top: 28px;
+  padding: 25px 27px;
+  border: 1px dashed var(--empty-border);
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--panel) 85%, transparent);
+}
+
+.empty-heart {
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--subtle-bg);
+  color: var(--purple);
+  font-size: 27px;
+}
+
+.empty-favorites h3 {
+  margin: 0 0 4px;
+  color: var(--ink);
+  font-family: var(--display);
+  font-size: 14px;
+}
+
+.empty-favorites p {
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.empty-favorites > a {
+  margin-left: auto;
+  color: var(--ink);
+  font-size: 10px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.empty-favorites > a span {
+  padding-left: 6px;
+  color: var(--purple);
+  font-size: 15px;
+}
+
+@media (max-width: 620px) {
+  .favorites-section {
+    padding: 48px 0 55px;
+  }
+
+  .favorites-tools {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .favorite-count {
+    width: 100%;
+    margin-bottom: 3px;
+  }
+
+  .empty-favorites {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+
+  .empty-favorites > div {
+    flex: 1;
+  }
+
+  .empty-favorites > a {
+    width: 100%;
+    margin: 0 0 0 61px;
+  }
+}

@@ -1,13 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
-
 :root {
-  font-family: 'DM Sans', 'Segoe UI', sans-serif;
   color: #e4eee7;
   background: #101713;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 
   --paper: #101713;
   --panel: #19241e;
@@ -30,10 +23,6 @@
   --art-tag-bg: rgba(16, 23, 19, 0.88);
   --art-tag-border: rgba(228, 238, 231, 0.2);
   --art-tag-ink: #f2f7f3;
-  --display: 'Space Grotesk', 'Segoe UI', sans-serif;
-
-  font-optical-sizing: auto;
-  font-weight: 400;
 }
 
 :root[data-theme='light'] {
@@ -61,37 +50,4 @@
   --art-tag-bg: rgba(247, 250, 247, 0.94);
   --art-tag-border: rgba(30, 44, 35, 0.18);
   --art-tag-ink: #1e2c23;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-html {
-  min-width: 320px;
-  scroll-behavior: smooth;
-  scroll-padding-top: 18px;
-}
-
-body {
-  min-width: 320px;
-  min-height: 100vh;
-  margin: 0;
-}
-
-button,
-select {
-  font: inherit;
-}
-
-button:focus-visible,
-a:focus-visible,
-select:focus-visible {
-  outline: 3px solid #93d6a1;
-  outline-offset: 3px;
-}
-
-::selection {
-  background: #39734a;
-  color: #f0fff2;
 }

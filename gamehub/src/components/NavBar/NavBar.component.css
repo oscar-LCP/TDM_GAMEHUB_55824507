@@ -1,0 +1,139 @@
+.site-header {
+  height: 82px;
+  padding: 0 8.2%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--ink);
+  text-decoration: none;
+  font-family: var(--display);
+  font-size: 23px;
+  font-weight: 800;
+  letter-spacing: -1.4px;
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 9px;
+  background: var(--lime);
+  font-size: 20px;
+  line-height: 1;
+  transform: rotate(-5deg);
+}
+
+.brand-accent {
+  color: var(--purple);
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 39px;
+  margin-left: 7%;
+}
+
+.main-nav a,
+.header-cta {
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+  transition: color 160ms ease;
+}
+
+.main-nav a:hover,
+.header-cta:hover {
+  color: var(--purple);
+}
+
+.header-cta {
+  display: inline-flex;
+  gap: 18px;
+  align-items: center;
+  border-bottom: 1px solid var(--ink);
+  padding: 9px 0;
+}
+
+.header-cta span {
+  color: var(--purple);
+  font-size: 17px;
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: var(--panel);
+  color: var(--ink);
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 700;
+  transition: background 160ms ease, border-color 160ms ease;
+}
+
+.theme-toggle:hover {
+  border-color: var(--purple);
+  background: var(--panel-raised);
+}
+
+.theme-toggle > span:first-child {
+  color: var(--purple);
+  font-size: 16px;
+  line-height: 1;
+}
+
+@media (max-width: 900px) {
+  .site-header {
+    padding: 0 6%;
+  }
+}
+
+@media (max-width: 620px) {
+  .site-header {
+    height: 68px;
+    padding: 0 5%;
+  }
+
+  .brand {
+    gap: 7px;
+    font-size: 20px;
+  }
+
+  .brand-mark {
+    width: 27px;
+    height: 27px;
+  }
+
+  .main-nav {
+    gap: 17px;
+    margin-left: 0;
+  }
+
+  .main-nav a {
+    font-size: 10px;
+  }
+
+  .theme-toggle {
+    padding: 7px 8px;
+  }
+
+  .theme-toggle__label,
+  .header-cta {
+    display: none;
+  }
+}

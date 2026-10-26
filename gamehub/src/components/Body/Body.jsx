@@ -1,3 +1,5 @@
+import './Body.component.css'
+
 export default function Body() {
   return (
     <section className="hero-section" id="inicio">

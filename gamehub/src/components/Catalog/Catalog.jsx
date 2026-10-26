@@ -1,4 +1,5 @@
 import { games } from '../../data/games'
+import './Catalog.component.css'
 
 const cardColors = {
   red: '#ff00002b',
