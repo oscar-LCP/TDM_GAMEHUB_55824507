@@ -4,7 +4,7 @@ export default function Body() {
       <div className="hero-copy">
         <span className="eyebrow"><span className="eyebrow-dot" /> TU PRÓXIMA AVENTURA EMPIEZA AQUÍ</span>
         <h1>Hay todo un mundo<br />por <span>jugar.</span></h1>
-        <p>Historias que te atrapan, mundos que te sorprenden.<br className="desktop-break" /> Encuentra el juego que no sabías que buscabas.</p>
+        <p>Historias que te atrapan, mundos que te sorprenden.<br /> Encuentra el juego que no sabías que buscabas.</p>
         <a className="primary-button" href="#catalogo">
           Explora ahora <span aria-hidden="true">↓</span>
         </a>

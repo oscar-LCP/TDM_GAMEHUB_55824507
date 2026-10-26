@@ -18,10 +18,49 @@
   --lime: #a8e66b;
   --lime-deep: #65b978;
   --line: #2a3930;
+  --favorites-bg: #141d18;
+  --subtle-bg: #263d2e;
+  --subtle-ink: #a3dcb0;
+  --control-border: #35463a;
+  --empty-border: #405347;
+  --meta-ink: #87988c;
+  --floating-border: #35483b;
+  --floating-bg: #202e26;
+  --platform-line: #2a3930;
+  --art-tag-bg: rgba(16, 23, 19, 0.88);
+  --art-tag-border: rgba(228, 238, 231, 0.2);
+  --art-tag-ink: #f2f7f3;
   --display: 'Space Grotesk', 'Segoe UI', sans-serif;
 
   font-optical-sizing: auto;
   font-weight: 400;
+}
+
+:root[data-theme='light'] {
+  color: #1e2c23;
+  background: #f7faf7;
+
+  --paper: #f7faf7;
+  --panel: #ffffff;
+  --panel-raised: #edf3ee;
+  --ink: #1e2c23;
+  --muted: #596b5e;
+  --purple: #347c48;
+  --lime: #a8e66b;
+  --lime-deep: #438a57;
+  --line: #d5e0d7;
+  --favorites-bg: #edf3ee;
+  --subtle-bg: #e4efe6;
+  --subtle-ink: #386b43;
+  --control-border: #c7d5ca;
+  --empty-border: #b8cbbd;
+  --meta-ink: #596b5e;
+  --floating-border: #c7d5ca;
+  --floating-bg: #ffffff;
+  --platform-line: #d5e0d7;
+  --art-tag-bg: rgba(247, 250, 247, 0.94);
+  --art-tag-border: rgba(30, 44, 35, 0.18);
+  --art-tag-ink: #1e2c23;
 }
 
 * {

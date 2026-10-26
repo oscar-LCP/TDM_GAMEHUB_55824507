@@ -1,4 +1,4 @@
-export default function NavBar() {
+export default function NavBar({ darkMode, onToggleTheme }) {
   return (
     <header className="site-header">
       <a className="brand" href="#inicio" aria-label="Gamehub, inicio">
@@ -9,6 +9,16 @@ export default function NavBar() {
         <a href="#catalogo">Explorar</a>
         <a href="#favoritos">Favoritos</a>
       </nav>
+      <button
+        className="theme-toggle"
+        type="button"
+        onClick={onToggleTheme}
+        aria-label={`Cambiar a modo ${darkMode ? 'claro' : 'oscuro'}`}
+        aria-pressed={!darkMode}
+      >
+        <span aria-hidden="true">{darkMode ? '☀' : '☾'}</span>
+        <span className="theme-toggle__label">{darkMode ? 'Modo claro' : 'Modo oscuro'}</span>
+      </button>
       <a className="header-cta" href="#catalogo">
         Encuentra tu próximo juego <span aria-hidden="true">↗</span>
       </a>

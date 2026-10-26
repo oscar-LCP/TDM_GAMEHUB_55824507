@@ -77,10 +77,36 @@
   font-size: 17px;
 }
 
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: var(--panel);
+  color: var(--ink);
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 700;
+  transition: background 160ms ease, border-color 160ms ease;
+}
+
+.theme-toggle:hover {
+  border-color: var(--purple);
+  background: var(--panel-raised);
+}
+
+.theme-toggle > span:first-child {
+  color: var(--purple);
+  font-size: 16px;
+  line-height: 1;
+}
+
 .hero-section {
   min-height: 515px;
   padding: 72px 11% 62px 12%;
-  box-sizing: border-box;
   display: grid;
   grid-template-columns: 1.08fr 0.92fr;
   align-items: center;
@@ -247,9 +273,9 @@
   align-items: center;
   gap: 9px;
   padding: 11px 14px;
-  border: 1px solid #35483b;
+  border: 1px solid var(--floating-border);
   border-radius: 5px;
-  background: #202e26;
+  background: var(--floating-bg);
   box-shadow: 0 9px 30px rgba(0, 0, 0, 0.28);
   color: var(--ink);
   font-size: 9px;
@@ -365,7 +391,7 @@
   margin: 36px 0 15px;
   padding-bottom: 12px;
   border-bottom: 1px solid var(--line);
-  color: #87988c;
+  color: var(--meta-ink);
   font-size: 8px;
   font-weight: 800;
   letter-spacing: 1.2px;
@@ -384,7 +410,7 @@
 
 .meta-divider {
   padding: 0 7px;
-  color: #5a6a60;
+  color: var(--muted);
 }
 
 .game-grid {
@@ -438,28 +464,12 @@
   transform: translate(-78px, -28px);
 }
 
-.game-art--violet {
-  background: linear-gradient(130deg, #254b40, #4c8060);
-}
-
-.game-art--rose {
-  background: linear-gradient(130deg, #376650, #718b53);
-}
-
 .game-art--green {
   background: linear-gradient(130deg, #345c3e, #80a85a);
 }
 
-.game-art--orange {
-  background: linear-gradient(130deg, #3c6745, #a08748);
-}
-
 .game-art--blue {
   background: linear-gradient(130deg, #28594e, #619078);
-}
-
-.game-art--yellow {
-  background: linear-gradient(130deg, #48643b, #9b9a4d);
 }
 
 .game-art--has-image::before {
@@ -515,10 +525,18 @@
   z-index: 1;
   bottom: 11px;
   left: 13px;
-  color: rgba(255, 255, 255, 0.85);
+  max-width: calc(100% - 26px);
+  padding: 6px 9px;
+  border: 1px solid var(--art-tag-border);
+  border-radius: 5px;
+  background: var(--art-tag-bg);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  color: var(--art-tag-ink);
+  backdrop-filter: blur(8px);
   font-size: 7px;
   font-weight: 800;
-  letter-spacing: 1.4px;
+  letter-spacing: 0.9px;
+  line-height: 1.4;
 }
 
 .favorite-button {
@@ -583,8 +601,8 @@
   flex: 0 0 auto;
   padding: 4px 7px;
   border-radius: 3px;
-  background: #263d2e;
-  color: #a3dcb0;
+  background: var(--subtle-bg);
+  color: var(--subtle-ink);
   font-size: 8px;
   font-weight: 700;
 }
@@ -602,8 +620,8 @@
   align-items: flex-start;
   gap: 7px;
   padding-top: 10px;
-  border-top: 1px solid #2a3930;
-  color: #a1b1a5;
+  border-top: 1px solid var(--platform-line);
+  color: var(--muted);
   font-size: 8px;
   line-height: 1.6;
 }
@@ -616,7 +634,7 @@
 
 .favorites-section {
   padding: 65px 0 76px;
-  background: #141d18;
+  background: var(--favorites-bg);
 }
 
 .favorites-tools {
@@ -651,7 +669,7 @@
 .favorites-tools select {
   min-width: 98px;
   padding: 8px 25px 8px 10px;
-  border: 1px solid #35463a;
+  border: 1px solid var(--control-border);
   border-radius: 4px;
   background: var(--panel-raised);
   color: var(--ink);
@@ -670,9 +688,9 @@
   gap: 17px;
   margin-top: 28px;
   padding: 25px 27px;
-  border: 1px dashed #405347;
+  border: 1px dashed var(--empty-border);
   border-radius: 6px;
-  background: rgba(25, 36, 30, 0.72);
+  background: color-mix(in srgb, var(--panel) 85%, transparent);
 }
 
 .empty-heart {
@@ -716,7 +734,6 @@
 .site-footer {
   min-height: 105px;
   padding: 25px 8.2%;
-  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -742,7 +759,7 @@
 }
 
 .footer-credit {
-  color: #819187;
+  color: var(--muted);
   font-size: 8px;
   font-weight: 700;
   letter-spacing: 0.8px;
@@ -806,6 +823,14 @@
 
   .main-nav a {
     font-size: 10px;
+  }
+
+  .theme-toggle {
+    padding: 7px 8px;
+  }
+
+  .theme-toggle__label {
+    display: none;
   }
 
   .header-cta {
